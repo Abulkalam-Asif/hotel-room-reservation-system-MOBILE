@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
+// import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await dotenv.load();
+  // print('Dotenv loaded!');
   runApp(const MyApp());
 }
 
