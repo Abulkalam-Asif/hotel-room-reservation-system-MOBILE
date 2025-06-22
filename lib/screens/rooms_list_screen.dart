@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import '../models/room.dart';
 import '../widgets/room_card.dart';
 import 'home_screen.dart';
+import 'booking_screen.dart';
 
 class RoomsListScreen extends StatefulWidget {
   final int adults;
@@ -112,7 +113,20 @@ class _RoomsListScreenState extends State<RoomsListScreen> {
       );
       return;
     }
-    // TODO: Navigate to booking screen, pass all data
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => BookingScreen(
+          selectedRoomIds: selectedRoomIds,
+          checkIn: widget.checkIn,
+          checkOut: widget.checkOut,
+          adults: widget.adults,
+          kids: widget.kids,
+          rooms: widget.rooms,
+          apiBaseUrl: apiBaseUrl,
+        ),
+      ),
+    );
   }
 
   void changeDates() {
