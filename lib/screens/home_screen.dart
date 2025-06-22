@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import '../widgets/hotel_card.dart';
 import '../models/hotel.dart';
 import 'rooms_list_screen.dart';
-// import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,9 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Hotel? hotel;
   bool hotelLoaded = false;
-  // final String apiBaseUrl =
-  //     dotenv.env['API_BASE_URL'] ?? 'http://10.0.2.2:5000/api';
-  final String apiBaseUrl = 'http://10.0.2.2:5272/api';
+  final String apiBaseUrl =
+      dotenv.env['API_BASE_URL'] ?? 'http://10.0.2.2:5272/api';
   final String defaultImage =
       'https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
